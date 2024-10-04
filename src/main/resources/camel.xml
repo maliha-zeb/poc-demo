@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://camel.apache.org/schema/spring
+    http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+    <bean id="pgpProperties" class="java.util.Properties">
+        <property name="file" value="pgp.properties"/>
+    </bean>
+
+    <bean id="fileComponent" class="org.apache.camel.component.file.FileComponent"/>
+
+    <bean id="pgpExample" class="PGPExample"/>
+</beans>
